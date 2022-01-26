@@ -1,6 +1,6 @@
 package constants
 
 const (
-	ConfigPath = "./configs"
-	ConfigName = ".env"
+	ConfigPath = "./configs/"
+	ConfigName = "config.toml"
 )

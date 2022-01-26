@@ -1,0 +1,11 @@
+[server]
+port    = 3000
+timeout = 10
+
+[database]
+host = "localhost"
+user = "gorm"
+password = "gorm"
+dbname = "gorm"
+timezone = "Europe/Istanbul"
+port = 5432

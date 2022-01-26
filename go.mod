@@ -3,6 +3,7 @@ module github.com/yusufpapurcu/todo-api-example
 go 1.17
 
 require (
+	github.com/BurntSushi/toml v0.3.1
 	github.com/gin-gonic/gin v1.7.7
 	github.com/go-playground/validator/v10 v10.10.0
 	gorm.io/driver/postgres v1.2.3
