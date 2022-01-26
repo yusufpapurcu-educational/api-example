@@ -16,9 +16,12 @@ func New(db *gorm.DB) http.Handler {
 }
 
 func setRoutes(handler *gin.Engine, db *gorm.DB) {
-	handler.GET("/task", api.GetAllTasks(db))
-	handler.POST("/task", api.CreateTask(db))
-	handler.GET("/task/:id", api.GetTask(db))
-	handler.PUT("/task/:id", api.UpdateTask(db))
-	handler.DELETE("/task/:id", api.DeleteTask(db))
+	task_handlers := handler.Group("/task")
+	{
+		task_handlers.GET("/", api.GetAllTasks(db))
+		task_handlers.POST("/", api.CreateTask(db))
+		task_handlers.GET("/:id", api.GetTask(db))
+		task_handlers.PUT("/:id", api.UpdateTask(db))
+		task_handlers.DELETE("/:id", api.DeleteTask(db))
+	}
 }
