@@ -4,8 +4,8 @@ import "time"
 
 type Task struct {
 	ID          int
-	Description string `validate:"required"`
+	Description string
 	Done        bool
 	Percentage  float32
-	Date        time.Time `validate:"required"`
+	Date        time.Time
 }
